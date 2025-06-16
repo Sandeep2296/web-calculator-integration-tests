@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Web Calculator Suite">
+
+    <test name="Calculator Operation Tests" parallel="classes" thread-count="4">
+        <classes>
+            <class name="com.calculator.tests.AdditionTest" />
+            <class name="com.calculator.tests.MultiplicationTest" />
+            <class name="com.calculator.tests.SubtractionTest" />
+            <class name="com.calculator.tests.DivisionTest" />
+        </classes>
+    </test>
+
+</suite>
