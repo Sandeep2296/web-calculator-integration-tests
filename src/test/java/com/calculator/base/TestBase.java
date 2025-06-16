@@ -1,6 +1,7 @@
 package com.calculator.base;
 
 import org.calculator.driver.DriverFactory;
+import org.calculator.utils.EnvManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
@@ -14,7 +15,7 @@ public class TestBase {
         String browser = System.getProperty("browser", "chrome");
         DriverFactory.createInstance(browser);
         WebDriver driver = DriverFactory.getDriver();
-        driver.get("https://nuix.github.io/SDET/senior-sdet/productionCalc/index.html");
+        driver.get(EnvManager.get("url"));
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
     }

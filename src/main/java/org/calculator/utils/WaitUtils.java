@@ -16,7 +16,7 @@ public class WaitUtils {
     public static WebElement waitForClickability(By locator, long seconds){
 
 
-        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(seconds));
+        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(10));
         if (DriverFactory.getDriver() == null) {
             throw new IllegalStateException("WebDriver instance is not initialized");
         }
