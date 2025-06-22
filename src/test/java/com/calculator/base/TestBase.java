@@ -23,7 +23,7 @@ public class TestBase {
 
     @AfterClass()
     public void suiteTeardown(){
-        DriverFactory.getDriver().quit();
+        DriverFactory.quitDriver();
     }
 
 }
